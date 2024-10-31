@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
    const [isOpen, setIsOpen] = useState(false);
@@ -82,21 +83,21 @@ export default function Navbar() {
               Contact Us
             </a>
           </li>
-          <li>
+          <Link to="login">
             <a 
              href="#"
              onClick={closeMenu}
              className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
               Login
             </a>
-          </li>
-          <li>
+          </Link>
+          <Link to="/signup">
             <a href="#"
             onClick={closeMenu}
             className="bg-green-800 text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer">
               Join GreenFlow
             </a>
-          </li>
+          </Link>
         </ul>
        </div>
     </div>

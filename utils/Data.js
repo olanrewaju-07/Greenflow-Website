@@ -50,3 +50,11 @@ export const Surveydata = [
         answer: "There are many ways to get involved with GreenFlow Nexus. You can join as a volunteer, participate in events, contribute your skills, or support our initiatives to strengthen food systems in Nigeria."
     },
 ]
+
+export const perishableData = [ 
+    "Fruits",
+    "Vegeatables", 
+    "Root and Tuber Crops",
+    "Legumes",
+    "Other perishable"
+]
