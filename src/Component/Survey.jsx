@@ -9,7 +9,7 @@ export default function Survey () {
         setOpenAnswerId(openAnswerId === id ? null : id);
     }
     return (
-        <div className="mt-10">
+        <div className="survey mt-10">
             <h2 className="text-center text-3xl font-semibold">Frequently Asked Questions (FAQs).</h2>
 
             <div className="p-10 w-[80%] mobile:w-[90%] mx-auto border-2 border-green-700 rounded-lg shadow-lg mt-10 mb-10">

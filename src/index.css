@@ -25,6 +25,11 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 
 .scroll-right {
@@ -39,3 +44,8 @@ body {
   overflow: hidden;
 }
 
+
+.fade-in {
+  opacity: 0;                     /* Start hidden */
+  animation: fadeIn 2s ease-in forwards;
+}

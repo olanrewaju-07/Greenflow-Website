@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa"
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6"
 export default function Footer () {
     return (
-        <div className="flex flex-col gap-3 bg-green-700">
+        <div className=" footer flex flex-col gap-3 bg-green-700">
             <div className="flex flex-row items-center justify-between mb-5 mobile:flex-col tablet:justify-center">
                 <div className="flex flex-col gap-2 items-start mobile:items-center tablet:items-center">
                 <img src="/assets/icons/Greenflow-White- Logo.png" alt="greenflow logo" className="h-40" />

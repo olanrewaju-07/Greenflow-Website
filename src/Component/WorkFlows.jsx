@@ -3,7 +3,7 @@ import transportImage from "/assets/icons/Truck.webp"
 import trackingImage from "/assets/icons/Tracking.jpg"
 export default function Workflows () {
     return (
-        <div className="relative bg-cover bg-center mt-10 bg-green-700">
+        <div className="about relative bg-cover bg-center mt-10 bg-green-700">
             <div className="flex flex-col items-center gap-5">
                 <h2 className="text-green-700 bg-white p-3 rounded-xl font-semibold text-2xl mt-5">How GreenFlows Works</h2>
                 <div className="flex flex-row items-center justify-between gap-5 p-10 mobile:flex-col">

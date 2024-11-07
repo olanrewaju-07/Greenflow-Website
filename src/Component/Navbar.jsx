@@ -1,9 +1,20 @@
 import { useRef } from "react";
-import { useState } from "react"
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+
 
 export default function Navbar() {
    const [isOpen, setIsOpen] = useState(false);
+   const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return() => window.removeEventListener("scroll", handleScroll);
+   }, []);
    const menuRef = useRef(null);
    const buttonRef =useRef(null);
 
@@ -17,10 +28,10 @@ export default function Navbar() {
    }
 
   return (
-    <div className="fixed w-full bg-white h-20 z-50 ">
+    <div className= {`fixed w-full  h-20 z-50 duration-300 ${isScrolled ? 'bg-green-500' : 'bg-white'  }`} >
       <div className="flex flex-wrap justify-between items-center">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-         <img src="./assets/icons/GreenFlow-Logo-removebg-preview.png" alt="GreenFlow Logo" className="h-24"/>
+         <img src={ isScrolled ? "/assets/icons/Greenflow-White- Logo.png" : "./assets/icons/GreenFlow-Logo-removebg-preview.png"} alt="GreenFlow Logo" className="h-24"/>
         </a>
         <button
          ref={buttonRef}
@@ -50,54 +61,42 @@ export default function Navbar() {
         isOpen ? "block" : "hidden"
        }`}>
 
-        <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0">
-          <li>
-            <a 
-             href="#"
+        <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0 mobile:bg-white">
+          <ScrollLink to="hero" offset={10} smooth={true} duration={500}
              onClick={closeMenu}
-             className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
               Home
-            </a>
-          </li>
-          <li>
-            <a 
-             href="#"
+          </ScrollLink>
+          <ScrollLink to="product" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950'  : 'text-black hover:text-green-800'} `}>
               Our Workflows
-            </a>
-          </li>
-          <li>
-            <a 
-             href="#"
+          </ScrollLink>
+          <ScrollLink to="about" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+              About us
+          </ScrollLink>
+          <ScrollLink to="survey" offset={-100} smooth={true} duration={500}
+             onClick={closeMenu}
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
                F.A.Qs
-            </a>
-          </li>
-          <li>
-            <a 
-             href="#"
-             onClick={closeMenu}
-             className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
+          </ScrollLink>
+          <ScrollLink to="footer" offset={200} smooth={true} duration={500}
+           onClick={closeMenu}
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-white   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
               Contact Us
-            </a>
-          </li>
-          <Link to="login">
-            <a 
-             href="#"
+          </ScrollLink>
+          <RouterLink to="login"
              onClick={closeMenu}
-             className="block py-2 px-4 text-md rounded hover:bg-green-800 mobile:hover:text-white lg:hover:text-green-800 lg:hover:bg-white lg:border-0 lg:p-0">
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-white  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
               Login
-            </a>
-          </Link>
-          <Link to="/signup">
-            <a href="#"
+          </RouterLink>
+          <RouterLink to="/signup"
             onClick={closeMenu}
-            className="hover:bg-green-800 bg-green-700  text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1">
+            className="hover:bg-green-800 bg-green-700  text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ">
               Join GreenFlow
-            </a>
-          </Link>
+          </RouterLink>
         </ul>
        </div>
     </div>
