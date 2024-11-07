@@ -17,10 +17,10 @@ export default function Navbar() {
    }
 
   return (
-    <div className="fixed w-full bg-white z-50">
+    <div className="fixed w-full bg-white h-20 z-50 ">
       <div className="flex flex-wrap justify-between items-center">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-         <img src="./assets/icons/GreenFlow-Logo-removebg-preview.png" alt="GreenFlow Logo" className="h-32"/>
+         <img src="./assets/icons/GreenFlow-Logo-removebg-preview.png" alt="GreenFlow Logo" className="h-24"/>
         </a>
         <button
          ref={buttonRef}
@@ -50,7 +50,7 @@ export default function Navbar() {
         isOpen ? "block" : "hidden"
        }`}>
 
-        <ul className="font-semibold flex flex-col mr-5 lg:p-0 mt-4 border bg-white rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0">
+        <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0">
           <li>
             <a 
              href="#"
@@ -94,7 +94,7 @@ export default function Navbar() {
           <Link to="/signup">
             <a href="#"
             onClick={closeMenu}
-            className="bg-green-800 text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer">
+            className="hover:bg-green-800 bg-green-700  text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1">
               Join GreenFlow
             </a>
           </Link>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import backgroundImage from "/assets/images/IMG-20241026-WA0001.jpg"
 export default function HeroSection() {
   return (
@@ -13,9 +14,9 @@ export default function HeroSection() {
             Get the best produce directly from local farmers,with refrigerated transport and real-time tracking.
           </p>
           <div className="flex flex-row items-start justify-center gap-10">
-          <button className="mt-8 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
+          <Link to="signup" className="mt-8 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
             Sign Up
-          </button>
+          </Link>
           <button className="mt-8 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
             Learn More
           </button>

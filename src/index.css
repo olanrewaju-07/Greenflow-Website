@@ -5,3 +5,37 @@
 body {
   @apply font-mono;
 }
+
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.scroll-right {
+  animation: scrollRight 10s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scroll-left {
+  animation: scrollLeft 10s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
