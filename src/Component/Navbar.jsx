@@ -61,35 +61,35 @@ export default function Navbar() {
         isOpen ? "block" : "hidden"
        }`}>
 
-        <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0 mobile:bg-white">
+        <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0 tablet:bg-white">
           <ScrollLink to="hero" offset={10} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Home
           </ScrollLink>
           <ScrollLink to="product" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950'  : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800'  : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Our Workflows
           </ScrollLink>
           <ScrollLink to="about" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               About us
           </ScrollLink>
           <ScrollLink to="survey" offset={-100} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-white lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
                F.A.Qs
           </ScrollLink>
           <ScrollLink to="footer" offset={200} smooth={true} duration={500}
            onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-white   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Contact Us
           </ScrollLink>
           <RouterLink to="login"
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-white  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950' : 'text-black hover:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Login
           </RouterLink>
           <RouterLink to="/signup"
