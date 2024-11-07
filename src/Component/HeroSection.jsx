@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <div className="relative bg-cover bg-center w-full h-screen" style={{backgroundImage:`url(${backgroundImage})`}}>
             {/* Overlay green color */}
-       <div className="absolute inset-0 bg-green-100 bg-opacity-50"></div>
+       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
        <div className="relative z-10 flex items-center justify-center h-full text-center">
         <div className="text-white">
           <h1 className="text-4xl font-bold md:text-5xl">
