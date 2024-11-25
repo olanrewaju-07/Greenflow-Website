@@ -163,14 +163,14 @@ export default function BuyerSignup () {
         </div>
       )}                                       
            </div>
-           <div className="flex flex-col gap-5">
-          <div className="flex flex-row items-center gap-4 mt-5">
+           <div className="flex flex-col">
+          <div className="flex flex-row items-center gap-4 mt-2">
             <hr  className="w-[200px] border border-green-950 tablet:border-white tablet:w-full" />
             <span className="tablet:text-white mobile:font-bold tablet:border-white">Or</span>
             <hr  className="w-[200px] border border-green-950 tablet:border-white tablet:w-full"/>
           </div>
 
-          <div className="flex flex-col gap-3 mb-10 tablet:items-center">
+          <div className="flex flex-row gap-3 tablet:items-center">
             <button className="w-full mobile:w-full tablet:w-[50%] border flex flex-row items-center justify-center gap-4 border-green-950 rounded-lg bg-none p-2 text-[15px] mt-4 hover:bg-green-100 tablet:border-none tablet:bg-white tablet:text-green-950"><FaGoogle /> Continue with Google</button>
             <button className="w-full mobile:w-full tablet:w-[50%]  border flex flex-row items-center justify-center gap-4 border-green-950 rounded-lg bg-none p-2 text-[15px] mt-4 hover:bg-green-100 tablet:border-none tablet:bg-white tablet:text-green-950"><FaApple className="" /> Continue with Apple</button>
         </div>

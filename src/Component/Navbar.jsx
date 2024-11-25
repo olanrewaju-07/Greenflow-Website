@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useState, useEffect } from "react"
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import { Link, Link as RouterLink } from "react-router-dom";
 
 
 export default function Navbar() {
@@ -30,9 +30,9 @@ export default function Navbar() {
   return (
     <div className= {`fixed w-full  h-20 z-50 duration-300 ${isScrolled ? 'bg-green-500' : 'bg-white'  }`} >
       <div className="flex flex-wrap justify-between items-center">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/landingpage" className="flex items-center space-x-3 rtl:space-x-reverse">
          <img src={ isScrolled ? "/assets/icons/Greenflow-White- Logo.png" : "./assets/icons/GreenFlow-Logo-removebg-preview.png"} alt="GreenFlow Logo" className="h-24"/>
-        </a>
+        </Link>
         <button
          ref={buttonRef}
           onClick={toggleMenu}
@@ -82,20 +82,20 @@ export default function Navbar() {
              className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
                F.A.Qs
           </ScrollLink>
-          <ScrollLink to="footer" offset={200} smooth={true} duration={500}
+          <RouterLink to="/signup" offset={200} smooth={true} duration={500}
            onClick={closeMenu}
              className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
-              Contact Us
-          </ScrollLink>
+              Register
+          </RouterLink>
           <RouterLink to="login"
              onClick={closeMenu}
              className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Login
           </RouterLink>
-          <RouterLink to="/signup"
+          <RouterLink to="/farmerRegister"
             onClick={closeMenu}
             className="hover:bg-green-800 bg-green-700  text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ">
-              Join GreenFlow
+              Be a GreenFlower
           </RouterLink>
         </ul>
        </div>

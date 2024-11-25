@@ -33,13 +33,13 @@ body {
 
 
 .scroll-right {
-  animation: scrollRight 10s linear infinite;
+  animation: scrollRight 40s linear infinite;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .scroll-left {
-  animation: scrollLeft 10s linear infinite;
+  animation: scrollLeft 40s linear infinite;
   white-space: nowrap;
   overflow: hidden;
 }

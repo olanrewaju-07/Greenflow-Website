@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom";
-import { FaGoogle, FaApple } from "react-icons/fa6";
+import { FaGoogle, FaApple, FaToggleOn, FaToggleOff } from "react-icons/fa6";
+import { useState } from "react";
 
 export default function BuyerLogin () {
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const toggleRemeberMe = () => {
+    setRememberMe(!rememberMe)
+
+    if(rememberMe){
+      localStorage.setItem ('rememberMe', true)
+    } else {
+      localStorage.removeItem('rememberMe')
+    }
+  }
   return(
     <div className="flex flex-col">
       <div className="flex flex-col mt-3 border border-green-950 rounded-xl p-5 mb-5 shadow-xl bg-gray-100 tablet:w-[90%] tablet:ml-8 mobile:w-full mobile:ml-0">
@@ -25,9 +37,16 @@ export default function BuyerLogin () {
              className="p-1 mt-1 border rounded-md bg-gray-200 focus:outline-none focus:ring-2 focus:ring-green-600" required/>
           </div>
 
-          <div className="flex flex-row items-center mt-6 gap-3">
-                        <input type="checkbox" name="checkbox" id="checkbox" />
-                        <span className="text-black opacity-80 text-[13px]">Agree to the terms and condition</span>
+                    <div className="flex flex-row items-center mt-6 justify-between">
+                         <div className="flex flex-row items-center gap-2">
+                          <button type="button" onClick={toggleRemeberMe} className="flex items-center">
+                            {rememberMe ? (<FaToggleOn className="text-green-950 text-3xl" />): 
+                            (<FaToggleOff className="text-green-950 text-3xl" /> 
+                          )}
+                          </button>
+                          <span>Remember me</span>
+                         </div>
+                        <Link to="/forgetpassword" className="text-red-600 text-sm hover:underline">Forget Password</Link>
                     </div>
 
                     <Link to='/home' type="submit" className=" flex items-center justify-center w-full border-none rounded-lg bg-green-600 p-1 text-[15px] text-white mt-4 hover:bg-green-700">
@@ -51,7 +70,7 @@ export default function BuyerLogin () {
             <hr  className="w-[200px] border border-green-950 tablet:border-white tablet:w-full"/>
           </div>
 
-          <div className="flex flex-col gap-3 mobile:mb-10 tablet:items-center">
+          <div className="flex flex-row gap-3 mobile:mb-10 tablet:items-center">
             <button className="w-full mobile:w-full tablet:w-[50%] border flex flex-row items-center justify-center gap-4 border-green-950 rounded-lg bg-none p-2 text-[15px] mt-4 hover:bg-green-100 tablet:border-none tablet:bg-white tablet:text-green-950"><FaGoogle /> Continue with Google</button>
             <button className="w-full mobile:w-full tablet:w-[50%] border flex flex-row items-center justify-center gap-4 border-green-950 rounded-lg bg-none p-2 text-[15px] mt-4 hover:bg-green-100 tablet:border-none tablet:bg-white tablet:text-green-950"><FaApple className="" /> Continue with Apple</button>
         </div>
