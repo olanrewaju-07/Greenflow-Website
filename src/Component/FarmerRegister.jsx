@@ -1,47 +1,47 @@
 import { useState } from "react";
 import AuthHeader from "./AuthHeader";
-// import {useToast} from "./ToastContainer"
+import {useToast} from "./ToastContainer"
 import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 
 export default function FarmerRegister () {
     const [selectedImage, setSelectedImage] = useState(null);
-    // const addToast = useToast();
-    // const [formData, setFormData] = useState({
-    //     farmName: '',
-    //     state: '',
-    //     city: '',
-    //     website: '',
-    //     socialLinks: '',
-    //     farmProduct: '',
-    //   });
+    const addToast = useToast();
+    const [formData, setFormData] = useState({
+        farmName: '',
+        state: '',
+        city: '',
+        website: '',
+        socialLinks: '',
+        farmProduct: '',
+      });
 
-    //   const validateForm = () => {
-    //     const requireField = ['farmName', 'state' , 'city', 'website' ,'socialLinks', 'farmProduct']
-    //     for (let field of requireField) {
-    //       if (!formData[field]) {
-    //         addToast(`${field} is required`, "error");
-    //         return false;
-    //       }
-    //     }
-    //     return true;
-    //   };
+      const validateForm = () => {
+        const requireField = ['farmName', 'state' , 'city', 'website' ,'socialLinks', 'farmProduct']
+        for (let field of requireField) {
+          if (!formData[field]) {
+            addToast(`${field} is required`, "error");
+            return false;
+          }
+        }
+        return true;
+      };
     
-    //   const handleSubmit = (e) => {
-    //     e.preventDafault();
+      const handleSubmit = (e) => {
+        e.preventDefault();
     
-    //     if (!validateForm()) return;
+        if (!validateForm()) return;
     
-    //     const data = {
-    //       ...formData,
-    //       selectedImage,
-    //     };
+        const data = {
+          ...formData,
+          selectedImage,
+        };
     
-    //     console.log(data);
+        console.log(data);
     
-    //     addToast("Form Submitted Succesfully", "Success");
-    //   };
+        addToast("Form Submitted Succesfully", "Success");
+      };
     
 
       const handleImageChange = (e) => {
@@ -50,14 +50,14 @@ export default function FarmerRegister () {
         }
       };
 
-    //   const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData((prev) => ({ ...prev, [name]: value }));
-    //   };
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+      };
 
     return (
         <div className="flex flex-col min-h-screen mobile:h-full w-full h-[800px] tablet:bg-green-950 bg-cover bg-center  lg:h-[1100px] md:overflow-x-hidden">
-             <Link to="/landingpage" className="self-start z-20">
+             <Link to="/" className="self-start z-20">
   <FaArrowLeft className="text-green-950 text-4xl absolute top-5 left-5" />
 </Link> 
             <AuthHeader />
@@ -72,7 +72,7 @@ export default function FarmerRegister () {
               Fill the GrenFlow Agrarian form
             </h2>
           </div>
-          <form className="mt-5 flex flex-col mobile:ml-5 mobile:w-full">
+          <form onSubmit={handleSubmit} className="mt-5 flex flex-col mobile:ml-5 mobile:w-full">
             <div className="flex flex-col mb-2">
               <div className="flex flex-row gap-1">
                 <label className="font-bold tablet:text-white">
@@ -83,9 +83,9 @@ export default function FarmerRegister () {
               <input
                 type="text"
                 placeholder="Farm name"
-                name="FarmName" 
-                // value={formData.farmName} 
-                // onChange={handleChange}
+                name="farmName" 
+                value={formData.farmName} 
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>
@@ -99,8 +99,8 @@ export default function FarmerRegister () {
                 type="text"
                 placeholder="State"
                 name="state"
-                // value={formData.state}
-                // onChange={handleChange}
+                value={formData.state}
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>
@@ -113,8 +113,8 @@ export default function FarmerRegister () {
                 type="text"
                 placeholder="City"
                 name="city"
-                // value={formData.city}
-                // onChange={handleChange}
+                value={formData.city}
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>
@@ -125,8 +125,8 @@ export default function FarmerRegister () {
                 type="text"
                 placeholder="Website"
                 name="website"
-                // value={formData.website}
-                // onChange={handleChange}
+                value={formData.website}
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>
@@ -139,8 +139,8 @@ export default function FarmerRegister () {
                 type="url"
                 placeholder="Social Media Links"
                 name="socialLinks"
-                // value={formData.socialLinks}
-                // onChange={handleChange}
+                value={formData.socialLinks}
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>
@@ -155,9 +155,9 @@ export default function FarmerRegister () {
               <input
                 type="text"
                 placeholder="Farm Product"
-                name="serviceOffered"
-                // value={formData.farmProduct}
-                // onChange={handleChange}
+                name="farmProduct"
+                value={formData.farmProduct}
+                onChange={handleChange}
                 className="w-full rounded-md h-8 border-2 placeholder:pl-4 border-green-950  bg-white tablet:bg-opacity-80 tablet:placeholder:text-black placeholder:text-[12px]"
               />
             </div>

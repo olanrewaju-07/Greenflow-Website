@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div>
       <Routes>
-         <Route path="/landingpage" element={<LanndingPage/>} />
+         <Route path="/" element={<LanndingPage/>} />
          <Route path="signup"  element={<Signup />} /> 
          <Route path="login"    element={<Login />} />
          <Route path="farmerRegister" element={<FarmerRegister />} /> 
