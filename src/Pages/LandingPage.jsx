@@ -2,13 +2,14 @@ import { useState } from "react";
 import Blog from "../Component/Blog";
 import Download from "../Component/Download";
 import Footer from "../Component/Footer";
-import HeroLandingPage from "../Component/HeroSection";
+import HeroToggle from "../Component/HeroToggle";
 import Navbar from "../Component/Navbar";
-import Product from "../Component/Product";
 import Survey from "../Component/Survey";
-import Workflows from "../Component/WorkFlows";
+import Mission from "../Component/Mission";
 import { useEffect } from "react";
 import Preloader from "../Component/Proloader/Preloader";
+import Product from "../Component/Product";
+import Worksflow from "../Component/WorksFlow";
 
 
 export default function LanndingPage() {
@@ -27,11 +28,12 @@ export default function LanndingPage() {
   return (
     <div>
     <Navbar />
-    <HeroLandingPage />
-    <Product />
-    <Workflows />
-    <Download />
+    <HeroToggle />
+    <Product /> 
+    <Mission />
+    <Worksflow />
     <Blog />
+    <Download />
     <Survey />
     <Footer />
     </div>

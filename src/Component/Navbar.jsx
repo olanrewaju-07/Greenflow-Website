@@ -28,10 +28,10 @@ export default function Navbar() {
    }
 
   return (
-    <div className= {`fixed w-full  h-20 z-50 duration-300 ${isScrolled ? 'bg-green-500' : 'bg-white'  }`} >
+    <div className= {`fixed w-full h-20 z-50 duration-300 ${isScrolled ? 'bg-[#263238]' : 'bg-white'  }`} >
       <div className="flex flex-wrap justify-between items-center">
         <Link to="/landingpage" className="flex items-center space-x-3 rtl:space-x-reverse">
-         <img src={ isScrolled ? "/assets/icons/Greenflow-White- Logo.png" : "./assets/icons/GreenFlow-Logo-removebg-preview.png"} alt="GreenFlow Logo" className="h-24"/>
+         <img src={ isScrolled ? "/assets/icons/Greenflow-White- Logo.png" : "./assets/icons/Greenflow-Green.png"} alt="GreenFlow-Green logo" className="h-24"/>
         </Link>
         <button
          ref={buttonRef}
@@ -94,7 +94,7 @@ export default function Navbar() {
           </RouterLink>
           <RouterLink to="/farmerRegister"
             onClick={closeMenu}
-            className="hover:bg-green-800 bg-green-700  text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ">
+            className={`hover:bg-green-800 py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ${isScrolled ? 'bg-white text-[#263238]' : 'bg-[#167206]  text-white'} `}>
               Be a GreenFlower
           </RouterLink>
         </ul>

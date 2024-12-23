@@ -1,28 +1,41 @@
-import { Link } from "react-router-dom"
-import backgroundImage from "/assets/images/IMG-20241026-WA0001.jpg"
 export default function HeroSection() {
   return (
-    <div className=" hero relative bg-cover bg-center w-full h-screen" style={{backgroundImage:`url(${backgroundImage})`}}>
-            {/* Overlay green color */}
-       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-       <div className="relative z-10 flex items-center justify-center h-full text-center">
-        <div className="text-white">
-          <h1 className="fade-in text-4xl font-bold md:text-5xl">
-            Harvest Fresh,Deliver Fresh: Connecting Farmers and Buyers for a Sustainable Future.
+    <div className="pt-20 mb-10 relative bg-[#167206] mobile:pt-8">
+      {/* Background Image */}
+      <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 object-cover">
+        <img src="/assets/images/Vector.svg" alt="vector image" className="rotate-180 w-80 mobile:w-40" />
+        <img src="/assets/images/Vector.svg" alt="vector image" className="w-80 mobile:w-40" />
+      </div>
+      {/* Main Content */}
+
+      <div className="flex flex-col lg:flex-row items-center lg:items-start px-8 lg:px-16 h-[70vh] relative z-10 mobile:gap-4">
+        {/* Left Text Section */}
+        <div className="lg:w-1/2 mobile:order-2">
+          <h1 className="text-4xl font-bold mb-4 text-white mobile:text-3xl mobile:text-center">
+            The Link Every Farmer Needs
           </h1>
-          <p className="mt-4 text-lg md:text-2xl mobile:hidden">
-            Get the best produce directly from local farmers,with refrigerated transport and real-time tracking.
+          <p className="text-lg text-white mt-6 mobile:text-center">
+            Join GreenFlow to link your harvest with trusted offtakers and cold storage solutions.
           </p>
-          <div className="flex flex-row items-start justify-center gap-10">
-          <Link to="signup" className="mt-8 px-9 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
-            Sign Up
-          </Link>
-          <button className="mt-8 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
-            Learn More
-          </button>
+          <div className="flex gap-4 mt-20 relative z-20">
+            <button className="bg-[#263238] text-white px-6 py-3 mobile:px-4 rounded hover:bg-white hover:text-[#263238] font-semibold">
+              Be a GreenFlower
+            </button>
+            <button className="bg-[#f8bd00] text-white px-6 py-3 mobile:px-4   rounded hover:text-[#f8bd00] hover:bg-white font-semibold">
+              Learn More
+            </button>
           </div>
+        </div>
+
+        {/* Right Image Section */}
+        <div className="relative lg:w-1/2 flex justify-center mobile:order-1">
+          <img
+            src="/assets/images/Group 76.svg"
+            alt="Hands holding soil"
+            className="rounded-full w-80 h-80 object-cover z-10 mobile:w-40 mobile:h-40"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }

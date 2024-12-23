@@ -1,7 +1,6 @@
 import { FaArrowLeft } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 export default function ForgetPassword() {
- 
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -10,7 +9,7 @@ export default function ForgetPassword() {
      // Close the modal after submission
     };
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-green-700">
+    <div className="fixed inset-0 flex items-center justify-center bg-[#167206]">
         <Link to="/login" className="self-start z-20">
   <FaArrowLeft className="text-white text-4xl absolute top-5 left-5" />
 </Link> 
@@ -29,13 +28,13 @@ export default function ForgetPassword() {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+            className="w-full bg-[#167206] text-white py-2 rounded hover:bg-[#167206]"
           >
             Send Reset Link
           </button>
         </form>
         <Link to="/login"
-          className="mt-4 w-full z-20 flex items-center justify-center text-green-500 hover:underline focus:outline-none"
+          className="mt-4 w-full z-20 flex items-center justify-center text-[#167206] hover:underline focus:outline-none"
         >
           Cancel
         </Link>
