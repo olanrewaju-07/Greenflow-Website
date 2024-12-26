@@ -1,167 +1,119 @@
 import { useState, useRef } from "react";
+import { FaBars, FaCog, FaHome, FaSearch, FaTimes } from "react-icons/fa";
+import { FaBagShopping, FaBell, FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
 
-
-export default function AuthSidebar () {
+export default function AuthSidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef();
- 
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Function to close the sidebar when a link is clicked
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 1024) { 
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <div className="relative lg:fixed z-30">
+    <div className="relative">
       <div
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-[100vh] mobile:h-[100vh] w-64 pt-2 bg-[#167206] transform ${
+        className={`fixed top-0 left-0 h-screen bg-[#167206] transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform lg:relative lg:translate-x-0 z-40`}
       >
         <div className="w-full h-full">
           <button
             onClick={toggleSidebar}
-            className={`absolute top-5 text-[20px] right-1 lg:hidden mx-4 mt-3 z-50 text-white ${
+            className={`absolute top-5 right-1 lg:hidden z-[1000] text-white ${
               !isOpen ? "hidden" : " "
             }`}
           >
             <FaTimes />
           </button>
-          <div className="w-full text-white h-full">
+
+          <div className="w-full text-white h-full flex flex-col items-center">
             <div className="mb-3 mx-4">
               <img
                 src="/assets/icons/Greenflow-White- Logo.png"
-                className="h-20 w-20 mobile:h-5 mobile:w-40 tablet:40 mt-6"
+                className="h-20 w-20 mobile:h-10 mobile:w-10 tablet:40"
                 alt="Greenflow logo"
               />
             </div>
-            <div className="flex flex-col justify-between h-[75vh]">
-              <nav className="flex flex-col mt-6">
 
-                <div className="relative">
-                  <Link
-                    to="/home"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
+            <nav className="border-[#263238] border-2 rounded-md">
+              <ul className="py-4 ml-3 px-4 flex flex-col gap-5 text-white">
+                <Link
+                  to="/home"
+                  onClick={handleLinkClick} 
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaHome />
+                  Home
+                </Link>
 
-                    <span className="text-white text-md tracking-tighter">
-                      Home
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  to="/browseproduct"
+                  onClick={handleLinkClick} 
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaSearch />
+                  Browse Product
+                </Link>
 
-                <div className="relative">
-                  <Link
-                    to="location"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-                    
-                    <span className="text-white text-md tracking-tighter">
-                      Location
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  to="/cart"
+                  onClick={handleLinkClick}  
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaCartShopping />
+                  Cart
+                </Link>
 
-                <div className="relative">
-                  <Link
-                    to="browseProduct"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-                    
-                    <span className="text-white text-md tracking-tighter">
-                      Browse Product
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  to="/myorder"
+                  onClick={handleLinkClick} 
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaBagShopping />
+                  My Order
+                </Link>
 
-                <div className="relative">
-                  <Link className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple">
+                <Link
+                  to="/notification"
+                  onClick={handleLinkClick} 
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaBell />
+                  Notification
+                </Link>
 
-                    <span className="text-white text-md tracking-tighter">
-                      My Order
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  to="/setting"
+                  onClick={handleLinkClick}
+                  className="flex flex-row items-center gap-2 px-1 py-1 hover:bg-[#263238] hover:text-white hover:border-l-4 border-white font-semibold"
+                >
+                  <FaCog />
+                  Setting
+                </Link>
+              </ul>
+            </nav>
 
-                <div className="relative">
-                  <Link
-                    to="/contact"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-
-                    <span className="text-white text-md tracking-tighter">
-                      Carts
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="relative">
-                  <Link
-                    to="/notification"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-                    <span className="text-white text-md tracking-tighter">
-                      Make Booking
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="relative">
-                  <Link
-                    to="/setting"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-                    <span className="text-white text-md tracking-tighter">
-                      Notification
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="relative">
-                  <Link
-                    to="/artizanprofile"
-                    className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple"
-                  >
-                    <span className="text-white text-md tracking-tighter">
-                      Setting
-                    </span>
-                  </Link>
-                </div>
-
-
-                <div className="relative">
-                  <Link className="relative flex flex-row gap-5 pl-4 py-2 hover:bg-lightPurple">
-
-                    <span className="text-white text-md tracking-tighter">
-                      Need Help?
-                      <span className="text-md text-white opacity-70 pl-1">
-                        Talk to us
-                      </span>
-                    </span>
-                  </Link>
-                </div>
-                
-              </nav>
-              <div className="flex flex-col w-[80%] ml-5 mt-28 gap-2">
-                <div className="flex flex-row gap-5 items-center">
-                  <span className="text-xs">Privacy Policy</span>|
-                  <span className="text-xs">Terms of Services</span>
-                </div>
-                <div className="flex items-center justify-center flex-col gap-5 ">
-                  <span className="text-xs">
-                    ©2024 GreenFlow Inc. | All rights reserved
-                  </span>
-                </div>
-              </div>
+            <div className="relative mt-5 px-3">
+              <img src="/assets/images/Rectangle 109.svg" alt="" />
+              <div className="absolute inset-0 bg-[#167206] bg-opacity-40"></div>
             </div>
           </div>
         </div>
       </div>
+
       <button
         onClick={toggleSidebar}
-        className={`absolute top-4 left-4 text-[25px] text-white lg:hidden z-50 bg-customPurple p-1 ${
+        className={`absolute top-4 left-4 text-[25px] text-[#167206] lg:hidden z-50 bg-customPurple p-1 ${
           isOpen ? "hidden" : ""
         }`}
       >

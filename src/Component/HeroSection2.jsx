@@ -18,10 +18,10 @@ export default function HeroSection2() {
             Join us today and enjoy year-round access to fresh, high-quality produce
             </p>
             <div className="flex gap-4 mt-20 relative z-20 mobile:justify-center">
-              <button className="bg-[#263238] text-white px-6 py-3 mobile:px-4 mobile:text-sm rounded hover:bg-white hover:text-[#263238] font-semibold">
+              <button className="bg-[#263238] text-white px-6 py-3 mobile:px-2 mobile:text-sm rounded hover:bg-white hover:text-[#263238] font-semibold">
                 Be a GreenFlower
               </button>
-              <button className="bg-[#f8bd00] text-white px-6 py-3 mobile:px-4 mobile:text-sm rounded hover:text-[#f8bd00] hover:bg-white font-semibold">
+              <button className="bg-[#f8bd00] text-white px-6 py-3 mobile:px-2 mobile:text-sm rounded hover:text-[#f8bd00] hover:bg-white font-semibold">
                 Learn More
               </button>
             </div>
