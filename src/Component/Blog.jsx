@@ -2,7 +2,7 @@ import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 export default function Blog () {
     return (
-        <div className="bg-[#FF66001A] flex flex-col items-center gap-2 mt-20 mx-auto max-w-6xl px-10 h-[90vh] border-2 border-[#263238] mobile:px-2 mobile:h-full">
+        <div className="bg-[#FF66001A] flex flex-col items-center gap-2 mt-20 mx-auto max-w-6xl px-10 h-[90vh] border-2 border-[#263238] mobile:px-2 mobile:h-full tablet:h-fit tablet:px-2">
         <div className="flex flex-row items-center justify-between w-full mt-10">
           <h2 className="text-2xl font-bold text-[#263238]">Latest News & Blogs</h2>
           <div className="flex flex-row items-center gap-3">
@@ -10,7 +10,7 @@ export default function Blog () {
             <FaCircleArrowRight className="text-2xl cursor-pointer text-[#263238]"  />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between w-full px-5 mt-5 mobile:flex-col mb-5 mobile:gap-5">
+        <div className="flex flex-row items-center justify-between w-full px-5 mt-5 mobile:flex-col mb-5 mobile:gap-5 tablet:gap-4">
 
            <div className="w-64 rounded-lg border-[#167206] border-2">
                  <img

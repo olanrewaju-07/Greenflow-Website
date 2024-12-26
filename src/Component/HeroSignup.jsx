@@ -51,17 +51,17 @@ export default function HeroSignup () {
 
        }
     return (
-         <div className="bg-[url('/assets/images/BgImage.svg')] bg-cover bg-center h-screen flex justify-center">
+         <div className="bg-[url('/assets/images/BgImage.svg')] bg-cover bg-center h-screen flex mobile:flex-col justify-center items-center">
               {/* Logo */}
-              <div className="flex mb-6 mobile:justify-center mobile:items-center">
+              <div className="flex mb-6">
                <img
                  src="/assets/icons/Greenflow-Green.png"
                  alt="Logo"
-                 className="h-32 w-auto absolute top-2 left-0 mobile:top-0 mobile:left-0"
+                 className="h-32 w-auto absolute top-2 left-0 mobile:relative mobile:mt-10"
                />
              </div>
  
-           <div className="w-full max-w-lg p-8">
+           <div className="w-full max-w-lg px-5 mobile:px-4">
             
              <h2 className="text-2xl font-semibold text-center mb-4">
                Create an Account

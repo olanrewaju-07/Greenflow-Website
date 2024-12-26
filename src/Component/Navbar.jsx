@@ -37,7 +37,7 @@ export default function Navbar() {
          ref={buttonRef}
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center mr-5 p-2 w-10 h-10 justify-center text-sm text-green-800 rounded-sm lg:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-green-950"
+          className="inline-flex items-center mr-5 p-2 w-10 h-10 justify-center text-sm text-white rounded-sm lg:hidden  focus:outline-none focus:ring-2 focus:ring-white"
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -64,37 +64,37 @@ export default function Navbar() {
         <ul className="font-semibold flex flex-col mr-5 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse  lg:border-0 tablet:bg-white">
           <ScrollLink to="hero" offset={10} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-[#f8bd00]  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Home
           </ScrollLink>
           <ScrollLink to="product" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800'  : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800'  : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Our Workflows
           </ScrollLink>
           <ScrollLink to="about" offset={-110} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded  mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               About us
           </ScrollLink>
           <ScrollLink to="survey" offset={-100} smooth={true} duration={500}
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950 lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
                F.A.Qs
           </ScrollLink>
           <RouterLink to="/signup" offset={200} smooth={true} duration={500}
            onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950   lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Register
           </RouterLink>
           <RouterLink to="login"
              onClick={closeMenu}
-             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-green-950 tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
+             className={`block py-2 px-4 text-md rounded mobile:hover:text-green-950  lg:border-0 lg:p-0 cursor-pointer ${isScrolled? 'text-white hover:text-[#f8bd00] tablet:text-green-800' : 'text-black hover:text-green-800 tablet:text-green-800'} `}>
               Login
           </RouterLink>
           <RouterLink to="/farmerRegister"
             onClick={closeMenu}
-            className={`hover:bg-green-800 py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ${isScrolled ? 'bg-white text-[#263238]' : 'bg-[#167206]  text-white'} `}>
+            className={`mobile:bg-[#167206] mobile:w-fit mobile:text-white py-2 px-6 rounded-lg block text-md sm:-mt-2 my-2 cursor-pointer transition delay-100 hover:-translate-y-1 ${isScrolled ? 'bg-transparent border-2 border-white text-[#f8bd00]' : 'bg-[#167206]  text-white'} `}>
               Be a GreenFlower
           </RouterLink>
         </ul>

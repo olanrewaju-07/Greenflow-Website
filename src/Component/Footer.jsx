@@ -4,15 +4,15 @@ import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6"
 export default function Footer () {
     return (
         <div className=" footer flex flex-col gap-3 bg-[#167206]">
-            <div className="flex flex-row items-center mb-5 mobile:flex-col tablet:justify-center w-full">
-                <div className="flex flex-col gap-2 items-start mobile:items-center tablet:items-center">
+            <div className="flex flex-row items-center mb-5 mobile:flex-col tablet:justify-center">
+                <div className="flex flex-col gap-2 items-start mobile:items-center tablet:items-center tablet:w-1/2">
                 <img src="/assets/icons/Greenflow-White- Logo.png" alt="greenflow logo" className="h-40" />
                 <span className="text-white text-[15px] w-[65%] mobile:w-full tablet:w-[80%] px-6 tablet:p-0 font-semibold opacity-80 mobile:text-center">
                        Bridging the gap between farmers and sustainable markets. We connect you to a reliable off-takers and cold storage solutions to keep your 
                        harvest fresh, reduce waste, and maximize earnings. Join us in transforming agricultural success.
                 </span>
                 </div>
-                <div className="flex flex-row mt-10 mobile:grid mobile:grid-cols-2 mobile:ml-5 w-full tablet:grid tablet:grid-cols-2">
+                <div className="flex flex-row mt-10 mobile:grid mobile:grid-cols-2 mobile:ml-5 w-full tablet:grid tablet:grid-cols-2 tablet:w-1/2 tablet:gap-5">
                     <div className="flex flex-col items-start gap-4 w-full">
                         <h2 className="text-white font-semibold text-[20px]">Quick Links</h2>
                         <ul className="flex flex-col items-start gap-2 text-white font-semibold text-[15px]">

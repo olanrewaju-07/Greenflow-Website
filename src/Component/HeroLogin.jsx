@@ -32,17 +32,17 @@ export default function HeroLogin () {
       }
   }
     return (
-        <div className="bg-[url('/assets/images/BgImage.svg')] bg-cover bg-center h-screen flex justify-center">
+        <div className="bg-[url('/assets/images/BgImage.svg')] bg-cover bg-center h-screen flex flex-col items-center justify-center mobile:flex-col ">
                      {/* Logo */}
                      <div className="flex mb-6">
                       <img
                         src="/assets/icons/Greenflow-Green.png"
                         alt="Logo"
-                        className="h-32 w-auto absolute top-2 left-0"
+                        className="h-32 w-auto absolute top-2 left-0 mobile:relative"
                       />
                     </div>
         
-                  <div className="w-full max-w-lg p-8 mt-10">
+                  <div className="w-full max-w-lg px-5 mobile:px-4 mt-10 mobile:mt-0 mobile:p-0 ">
                     {/* Form Title */}
                     <h2 className="text-2xl font-semibold text-center mb-4">
                       Welcome Back to GreenFlow.
@@ -75,12 +75,12 @@ export default function HeroLogin () {
                        </div>
                       <Link to="/home"
                         type="submit"
-                        className="w-full mt-6 bg-[#167206] text-white py-1  px-2 flex items-center justify-center rounded-lg hover:bg-[#167206] transition"
+                        className="w-full mt-6 mb-5 bg-[#167206] text-white py-1  px-2 flex items-center justify-center rounded-lg hover:bg-[#167206] transition"
                       >
                         Sign Up
                       </Link>
 
-                      <Link to="/forgetpassword" className="absolute right-[450px] top-[320px] text-[15px] text-red-700">Forget Password </Link>
+                      <Link to="/forgetpassword" className="text-[15px] text-red-700">Forget Password </Link>
                     </form>
             
                     {/* Login Link */}
