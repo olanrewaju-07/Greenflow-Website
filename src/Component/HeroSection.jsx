@@ -18,10 +18,10 @@ export default function HeroSection() {
             Join GreenFlow to link your harvest with trusted offtakers and cold storage solutions.
           </p>
           <div className="flex gap-4 mt-20 relative z-20">
-            <button className="bg-[#263238] text-white px-6 py-3 mobile:px-4 rounded hover:bg-white hover:text-[#263238] font-semibold">
+            <button className="bg-[#263238] text-white px-6 py-3 mobile:px-2 rounded hover:bg-white hover:text-[#263238] font-semibold">
               Be a GreenFlower
             </button>
-            <button className="bg-[#f8bd00] text-white px-6 py-3 mobile:px-4   rounded hover:text-[#f8bd00] hover:bg-white font-semibold">
+            <button className="bg-[#f8bd00] text-white px-6 py-3 mobile:px-2  rounded hover:text-[#f8bd00] hover:bg-white font-semibold">
               Learn More
             </button>
           </div>
