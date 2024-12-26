@@ -37,7 +37,7 @@ export default function Navbar() {
          ref={buttonRef}
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center mr-5 p-2 w-10 h-10 justify-center text-sm text-white rounded-sm lg:hidden  focus:outline-none focus:ring-2 focus:ring-white"
+          className={`inline-flex items-center mr-5 p-2 w-10 h-10 justify-center text-sm ${isScrolled ? "text-white focus:ring-white focus:ring-2" : "text-[#167206] focus:ring-[#167206] focus:ring-2"} rounded-sm lg:hidden  focus:outline-none `}
         >
           <span className="sr-only">Open main menu</span>
           <svg

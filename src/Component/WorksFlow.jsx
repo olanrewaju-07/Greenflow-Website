@@ -2,7 +2,7 @@ export default function Worksflow (){
     return (
         <div className="flex flex-col items-center gap-5 p-3">
           <h2 className="text-4xl font-bold text-[#f8bd00]">Our WorkFlows</h2>
-          <div className="flex flex-row items-cente gap-10 mobile:flex-col tablet:grid tablet:grid-cols-2">
+          <div className="flex flex-row items-center gap-10 mobile:grid mobile:grid-cols-1 tablet:grid tablet:grid-cols-2">
             <div className="w-64 bg-white rounded-lg shadow-lg shadow-[#167206] ">
                  <img
                   src="/assets/images/Cold Storage.svg"
